@@ -26,7 +26,7 @@
 1.  **Клонуйте репозиторій:**
     ```bash
     git clone https://github.com/MaksimkaKrul/BackEndLab1
-    cd your-repo
+    cd BackEndLab1
     ```
 
 2.  **Перейдіть на гілку `lab2`:**
