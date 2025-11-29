@@ -6,7 +6,8 @@
 
 Сервіс розгорнуто на Render.com і доступний за наступною адресою:
 
-*   **Основний URL:** `https://your-app-name-lab4.onrender.com`
+*   **Основний URL:** `https://backendlab4-jpit.onrender.com`
+*   **Github посилання** `https://github.com/MaksimkaKrul/BackEndLab1/tree/feature/lab4`
 
 ## 🔐 Реалізований функціонал безпеки
 
@@ -33,8 +34,8 @@
 
 1.  **Клонуйте репозиторій:**
     ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+    git clone https://github.com/MaksimkaKrul/BackEndLab1
+    cd BackEndLab1
     ```
 
 2.  **Запустіть проект (з перезбіркою контейнерів):**
