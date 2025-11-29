@@ -5,6 +5,8 @@ class UserModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(256), nullable=False)
+    
     default_currency_id = db.Column(db.Integer, db.ForeignKey("currencies.id"), nullable=True)
     default_currency = db.relationship("CurrencyModel")
     
