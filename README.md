@@ -13,8 +13,8 @@
 
 1.  **Клонуйте репозиторій:**
     ```bash
-    git clone https://github.com/your-username/flask-healthcheck-lab.git
-    cd flask-healthcheck-lab
+    git clone https://github.com/MaksimkaKrul/BackEndLab1
+    cd BackEndLab1
     ```
 
 2.  **Запустіть за допомогою Docker Compose:**
