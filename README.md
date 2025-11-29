@@ -34,9 +34,9 @@
 
 1.  **Клонуйте репозиторій та перейдіть у потрібну гілку:**
     ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    git checkout lab3
+    git clone https://github.com/MaksimkaKrul/BackEndLab1
+    cd BackEndLab1
+    git checkout feature/lab3
     ```
 
 2.  **Запустіть проект за допомогою Docker Compose:**
