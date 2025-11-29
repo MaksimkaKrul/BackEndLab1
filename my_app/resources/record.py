@@ -2,6 +2,7 @@ from flask import request
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from sqlalchemy.exc import SQLAlchemyError
+from flask_jwt_extended import jwt_required
 
 from my_app import db
 from my_app.models import RecordModel, UserModel
@@ -12,11 +13,13 @@ blp = Blueprint("Records", "records", description="Operations on records")
 
 @blp.route("/record/<int:record_id>")
 class Record(MethodView):
+    @jwt_required()
     @blp.response(200, RecordSchema)
     def get(self, record_id):
         record = RecordModel.query.get_or_404(record_id)
         return record
 
+    @jwt_required()
     def delete(self, record_id):
         record = RecordModel.query.get_or_404(record_id)
         db.session.delete(record)
@@ -26,6 +29,7 @@ class Record(MethodView):
 
 @blp.route("/record")
 class RecordList(MethodView):
+    @jwt_required()
     @blp.response(200, RecordSchema(many=True))
     def get(self):
         user_id = request.args.get('user_id')
@@ -41,6 +45,7 @@ class RecordList(MethodView):
 
         return query.all()
 
+    @jwt_required()
     @blp.arguments(RecordSchema)
     @blp.response(201, RecordSchema)
     def post(self, record_data):
